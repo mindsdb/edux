@@ -1,4 +1,4 @@
-# MindsDB eduX
+# MindsDB eduX ![edux](https://img.shields.io/badge/Open%20edX-theme-green?style=for-the-badge&logo=appveyor)
 
 EduX is a custom theme for Open edX, that follows MindsDB style guides.
 
@@ -45,3 +45,4 @@ tutor images build openedx
 tutor local start -d
 ```
 5. Login to admin panel `http://localhost/admin` and add site theme(theme-dir-name should be edux). 
+> Note: [Tutor](https://docs.tutor.overhang.io/) is a docker-based Open edX distribution, that makes it easy to deploy, customize or upgrade Open edX.
