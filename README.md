@@ -1,5 +1,7 @@
 # MindsDB eduX ![edux](https://img.shields.io/badge/Open%20edX-theme-green?style=for-the-badge&logo=appveyor)
 
+[![Build Status](https://travis-ci.org/mindsdb/edux.svg?branch=master)](https://travis-ci.org/mindsdb/edux)
+
 EduX is a custom theme for Open edX, that follows MindsDB style guides.
 
 ## EduX Directory 
