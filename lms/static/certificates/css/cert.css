@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+.cert-back{
+    background-image: url('/static/edux/certificates/images/cert-background.png') !important;
+    width: 1122px;
+    height: 742px;
+    background-size: cover !important;
+}
+
+.cert-logo{
+    float: right;
+    width: 316px;
+    height: 57px;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+.cert-title{
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #2c263f;
+}
+.small-text{
+    font-size: 14px;
+}
+.cert-sign{
+    float: right;
+}
+
+.cert-title-desc{
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.cert-user-name{
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.29px;
+    color: #2c263f;
+}  
+.cert-course-name{
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.29px;
+    color: #00b06d;
+}
+.cert-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.cert-desc{
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #2c263f;
+}
