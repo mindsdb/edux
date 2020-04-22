@@ -1,0 +1,57 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+<main class="accomplishment accomplishment-main">
+        <div class="wrapper-accomplishment-rendering">
+            <div class="accomplishment-rendering cert-back">
+                <div class="col-md-12">
+                    <img src="${static.url('certificates/images/logo_gh.png')}" class="cert-logo" alt="MindsDB logo">
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="cert-title">VERIFIED CERTIFICATE OF ACHIVEMENT</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="cert-title-desc">This is to certify that</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="cert-user-name">${accomplishment_copy_name}</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <span>Successfully attended to:</span>
+                    </div>
+                    <div class="col-sm-12">
+                        <h1 class="cert-course-name mt-2">${accomplishment_copy_course_name}</h1>   
+                        <span class="cert-desc">a course of study offered by MindsDB, an opensource </span>
+                        <p class="cert-desc">automated machine learning platform.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="cert-footer">
+                            <span class="small-text font-weight-bold">${certificate_date_issued_title}</span>
+                            <span class="small-text">${certificate_date_issued}</span>
+                            <span class="small-text font-weight-bold">${certificate_id_number_title}:</span>
+                            <span class="small-text">${certificate_id_number}</span>
+                        </p>
+                        % if certificate_data:
+                        % for signatory in certificate_data.get('signatories', []):
+                            % if signatory.get('signature_image_path'):
+                                <div class="cert-sign">
+                                    <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                    <h4 class="signatory-name hd-5 font-weight-bold">${signatory['name']}</h4>
+                                    <p class="signatory-credentials copy copy-micro">
+                                        <span class="role">${signatory['title']}</span>
+                                        <span class="organization">${signatory['organization']}</span>
+                                    </p>
+                                </div>
+                            % endif
+                        % endfor
+                    % endif
+                    </div>                    
+                </div>
+            </div>
+    </main>
