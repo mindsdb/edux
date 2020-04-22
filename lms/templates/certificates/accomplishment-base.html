@@ -17,13 +17,19 @@ course_mode_class = course_mode if course_mode else ''
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>${document_title}</title>
-
-    <%static:css group='style-certificates'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- move cert css as sass, when the main-ltr.scss issue is resolved, also download fonts and use @font-face-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${static.url('certificates/css/cert.css')}">
+    <%static:css group='style-certificates'/>  
 </head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
 
     <div class="wrapper-view" dir="${dir_rtl}">
+
+        <%include file="_accomplishment-header.html" />
 
         <hr class="divider sr-only">
 
@@ -31,6 +37,7 @@ course_mode_class = course_mode if course_mode else ''
 
         <hr class="divider sr-only">
 
+        <%include file="_accomplishment-footer.html" />
     </div>
 
     <%include file="_assets-secondary.html" />
