@@ -1,23 +1,4 @@
 $primary: #00b06d;
-body{
-    position: relative;
-    min-height: 100vh;
-}
 .mdb-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem; 
-    box-shadow: none !important;
-    border-top: 1px solid #00b06d !important;
-}
-.copyright{
-    margin-bottom: 1rem;
-    color: #5d6970 !important;
-}
-.mdb-nav{
-    margin-bottom: 1rem;
-}
-.main-container{
-    padding-bottom: 2.5rem;
+    display:none;
 }
